@@ -1,0 +1,25 @@
+
+[
+  {
+    "direction": "315deg",
+    "firstColor": "#f8ceec",
+    "firstPercentage": 0,
+    "secondColor": "#a88beb",
+    "secondPercentage": 74
+  },
+  {
+    "direction": "315deg",
+    "firstColor": "#abe9cd",
+    "firstPercentage": 0,
+    "secondColor": "#3eadcf",
+    "secondPercentage": 74
+  },
+  {
+    "direction": "315deg",
+    "firstColor": "#f39f86",
+    "firstPercentage": 0,
+    "secondColor": "#f9d976",
+    "secondPercentage": 74
+  }
+]
+
