@@ -1,8 +1,8 @@
 <div class="container-fluid">
   <div class="sidenav">
-    <app-pallet></app-pallet>
+    <app-pallet (colored)='setBoardColor($event)'></app-pallet>
   </div>
-  <div class="container">
+  <div id="board" class="container">
     <app-board></app-board>
   </div>
 </div>

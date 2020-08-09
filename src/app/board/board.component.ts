@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Apollo, gql} from 'apollo-angular';
 
 @Component({
   selector: 'app-board',
@@ -6,10 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board.component.css']
 })
 export class BoardComponent implements OnInit {
+  notes: any[];
 
-  constructor() { }
+  constructor(private apollo: Apollo) { }
 
   ngOnInit(): void {
+      this.apollo
+      .watchQuery({
+        query: gql`
+          {
+            notes {
+              title
+              text
+            }
+          }
+        `,
+      })
+      .valueChanges.subscribe(({ data, loading }) => {
+      console.log('data ', data);
+      console.log('loading ', loading);
+    });
   }
+
 
 }

@@ -1,6 +1,7 @@
-<div class="text-center" *ngFor="let color of palletStr">
+<div class="text-center" *ngFor="let color of pallet">
 <a href="#" >
-  <button class="btn" [style]="{'background-image': color}">
+  <button class="mb-2" [style]="{'background-image': 'linear-gradient('+color.direction+', '+color.firstColor + ' '+ color.firstPercentage + '%, ' + color.secondColor + ' ' + color.secondPercentage + '%)'}" (click)="changeBackground(color)">
+    {{color.name}}
   </button>
 </a>
 </div>

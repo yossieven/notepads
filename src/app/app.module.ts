@@ -6,6 +6,8 @@ import { BoardComponent } from './board/board.component';
 import { NotepadComponent } from './notepad/notepad.component';
 import { NoteComponent } from './note/note.component';
 import { PalletComponent } from './pallet/pallet.component';
+import { GraphQLModule } from './graphql.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { PalletComponent } from './pallet/pallet.component';
     PalletComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    GraphQLModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

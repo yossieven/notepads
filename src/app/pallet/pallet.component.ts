@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {Gradient} from '../Gradient';
 // @ts-ignore
 import * as colors from '../colors.json';
@@ -12,14 +12,13 @@ export class PalletComponent implements OnInit {
   pallet: Array<Gradient> = [];
   palletStr: Array<string> = [];
   gradientStr = '';
+  @Output() colored = new EventEmitter<Gradient>();
 
   constructor() {
     console.log((colors as any).default);
     for (const color of (colors as any).default) {
       this.pallet.push(color);
-      // tslint:disable-next-line:max-line-length
-      this.gradientStr = 'linear-gradient(' + color.direction + ',' + color.firstColor + ' ' + color.firstPercentage + '%, ' + color.secondColor + ' ' + color.secondPercentage + '%)';
-      console.log('the color ', this.gradientStr);
+      console.log('the color ', this.pallet);
       this.palletStr.push(this.gradientStr);
     }
     console.log('pallet: ', this.pallet);
@@ -29,4 +28,7 @@ export class PalletComponent implements OnInit {
 
   }
 
+  changeBackground(color){
+    this.colored.emit(color);
+  }
 }
