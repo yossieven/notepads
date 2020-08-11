@@ -1,1 +1,11 @@
+.board{
+  border: 1px solid black;
+}
 
+.card {
+  width: 150px;
+}
+
+.card img {
+  width: inherit;
+}

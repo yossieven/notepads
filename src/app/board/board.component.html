@@ -1,0 +1,16 @@
+<div class="row"><br></div>
+<div class="row">
+  <div class="col-md">
+    <button class="btn btn-primary mb-2" (click)="addNotepad()">Add Notepad</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-2" *ngFor="let notepad of notepads">
+    <div class="card">
+      <img class="card-img-top" src="../../assets/images/notepad-117597_640.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{notepad.name}}</h5>
+      </div>
+    </div>
+  </div>
+</div>
