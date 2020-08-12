@@ -8,6 +8,8 @@ import { NoteComponent } from './note/note.component';
 import { PalletComponent } from './pallet/pallet.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
+import { NotepadformComponent } from './notepadform/notepadform.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { HttpClientModule } from '@angular/common/http';
     BoardComponent,
     NotepadComponent,
     NoteComponent,
-    PalletComponent
+    PalletComponent,
+    NotepadformComponent
   ],
   imports: [
     BrowserModule,
     GraphQLModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

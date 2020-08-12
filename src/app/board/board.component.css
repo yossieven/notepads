@@ -2,10 +2,11 @@
   border: 1px solid black;
 }
 
-.card {
-  width: 150px;
-}
-
-.card img {
-  width: inherit;
+.notepad-name{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-family: 'Antic Slab', serif;
 }
